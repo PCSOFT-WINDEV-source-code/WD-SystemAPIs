@@ -1,0 +1,104 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_Child
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_Child
+ identifier : 0x26b1d04408dd9d3f
+ internal_properties : CAAAAAgAAABLeH4lBqzZYxU/NQ3FJdDx4qo4IoETxJivluOxdARuDGpayNAmNLh5LLDrdZOV87Dky7nPrHLD860zkikQPlKLn0kDaWM4CU20hv0lHFroaulcEtCbSLNsOd5qPnPLCwy56jK/6BIqVXe/8AFHd7R570yClwJj0gjUCUas4YDs8lYbYIAmG9o9LYZQoed0AGeS7eEgXt5KlV6Xylr1M4KUIvquQau8taD8UiYPVQqIn6Of7uA/+dKDAQWj6YNvm108EyMG8/PnMdULctBMAL25nbKQU7DGEkFQGN+KkJnXvVgWrqrs3R4pQg27J1xxHzku/dOWz+5zKhhDcYrMb8yOoH1eu19PG2zsAvkXNGajHm4jF7d151h4sqzl1czEjy+EdUR99BrpfVneP+c58GBXW/oogauR1HXacana5F1LWYrw9UZ+MUZIe5r0onSCNnAXS9r2PixxG1xymyUZA7iUxSbA9OenGUi/z8iIogVfav2i9BQwJKV3NcxAp4lD/rA1EgcN+97hMmzIkW4IZjyj8jaH1oI6LiS3kgLKOTV5K3LIWbLC7d+NkIHkBOjaWq3g4q+BJmbEZBmEhjN7KSrIIQY3nz6Ao1dHYl0gUI8Pg/sIEyrxdQS2xZLN8nRoOP6GEGY+Jh7jNxy5PZJkwW9VJpuZgjqEcWdSNyL9RznLXNkbmk3PU4zsGV0a6jeqq2vQ4/xaSDPMdvCTfbxiUhHzUTz65h4x8d27TqzIHBauYn2ak26OQs6l6gUfrWda3JNUSt/Hdi2AuOVYqaVp+W64ljrR3s7h0Fbq8KYWqXAUhfVxTik=
+ properties :
+  width : 503
+  height : 195
+  widthClient : 487
+  heightClient : 156
+ controls :
+  -
+    name : STC_TITLE
+    identifier : 0x26b1d04408de9d3f
+    internal_properties : CAAAAAgAAAAFtCwg6koFYd9mYGen0FyxjW2eTfaG4QMpb8hUQ3wCZh8yVCR5H6beybgCckfAgQtquiuAxxpzOInuLfyy1sN/jnVjng5p5mFPyYcZqnMI+o4iFHzO3xFBkbwR5JZ2QQZqYemvXCvdVRgDXBhEK94tlI1MZz9SRFGTE+cvKHEujk+pXaTv6zQbiAod/1PMhQWGEDwCsBeA+yofpwLQj7ZTvAmWFs4WAqDQUU2erBqFOAXAzhMrVdJtfDp16+VULzPUB8ySY1L3TntRNh3NKLLfuEhvrpAURI58jlluY6T3hAmhY9qF0yi+hpb/uAPTLjzDtbp7oL39sD91tdi6mwXypEibDsKMVSmy2iz98EuNbdgSD7rIVBrihbVT/Dd6vlmNAcHgRNftaYGWbb5HLKVIue72BlnXDL4G4ns0jN26XOcwll8WJmvy01QXFy4s169QuPHq1VKEEdiI01VbOogZ4P6HY6IM+j0IUK0og87qCvlWPj5u/kbMGbahnnHSWoz0EpRa+tQ8IQKxxMnHI9pq/w==
+    properties :
+     x : 3
+     y : 6
+     width : 482
+     height : 19
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+  -
+    name : STC_DETAILS
+    identifier : 0x26b1d04408df9d3f
+    internal_properties : CAAAAAgAAABxVRnvPZU7C0R7IgBkjJTJpLbD1NLqe0/vPPdn8rEak2GFAZRxD2cP24mJkmkwrYs1brO88gOhCU3ubH836BE0z4v0xbyHfzKMTtByZgEMsn88Y9KHTKGfZ2+ltmqKMR3CpOZWGO+tySEXTL/dfYt6CFKgxvDLhOsZEEzuxNBOmmVuOaAf+J1vD5k/2j29nGpY0qNTBDjQuXJBeMNDRm+2ksE7qdJf9Rtj2sUG4si250/FyJOeZC8vPMGW5KcvAvf7V2/CHfM9p/AZDbstG5Yi7tLPfAS323U/OxiNRCWcMiPLn4i+vAcZr2018lNNRdktYKQUKEAGrtOwFGxshrMhg/wZgNXfxmWK9ij2Bc0fSpVLoYgCBP8FzOiKAgv/H10PU6zVn0EQR2rE1ArFmZYD/o+wMqQjZw/4x5V6EIdKK3Fu2VVZXlJF2baDuISBVMCBX8TwPBzIU/AHMStY++wcRgM4hpOMC9YDQaUTnxz00eQQR/YgQDrLAQnV6Xcjj1nNe+c9PnMVjfYOn3L7pKIDy0d2FK4DkL0GBRYchBfulR2Sii8ByzvDWO8NWJ10uWOPyxjOW65bqaZy1SqQz30sjblYyBD/x3IeMj9U7SzwWZ2twVK8hbMnmRRJeEVIcZRKbyLUBrPOBQ65avm01yj/Ugz9RGpwJDCNfNs7hGqr4/KyVBevSufKz3umSPuezZQOQHMKwwAKhOErIknJ2pN2RrCi2ZyzofPoP6uczXxakbH0XVd9faMs2rcgv7VQ8+wcfCQN2+lRmAs2sORQBVcEbOxTQ1Z+uL1yyJc25W4GaZTYO8I2
+    properties :
+     x : 6
+     y : 31
+     width : 475
+     height : 97
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x249963d61728939e
+  internal_properties : CAAAAAgAAACCv199ARoPUfG3WAPSG9eefhOOjWMQrs8CrX6cGGGJPoSHWBq4PXhStOWc1YnAZMZ5+EFR1WTDn8CTOTiyLnXPpAR5X8rsRkPZrm1yZeYDDt4kRzDPLbUf4Sh/mD3kd1D8V2drCFLmjeQhgpw7GKGwHRga+ZdjSqXGIC3LD1RracZ230hOmUJTj+ABDW4IHrw4PflmVGgp8E9KnAf/gselRrzEY90l3Cr9N00QijFYYrbrl4qF4kdim1YX6jYT4ezQhbJsU84ENZsxzq+o0JVHYQ8rxck600VhGV04/ao=
+  options : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAACBOXnY/4xwTTkwTA7Y+W2oihQi3j+IczRKsVQzQ1eNlyIrvzgqEwc42oVkPd6ETXegXbSqfki2UQ6fNwUGUN6uRwphQi+UBgAZBE9+KY6t8QVVECLX4BHo0I2/4RG0
+ actionbar : {}
+ code_elements :
+  internal_properties : CAAAAAgAAADoX9MLfGfWKwayS7h3VU0IxYS1fW9zlSB2kZU1q9ocHwiflE/MXMw7jrvAUMb9rvXxetcSO4tMZt/hlnkyfCGjngzjkA==
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      // Grays the system icons
+      HideSystemIconMDIChild(Handle(MySelf))
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : fenfille
+resources :
+ string_res :
+  identifier : 0x1289b13200177236
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+associated_test :
+ name : TEST_Fille.wxt
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe

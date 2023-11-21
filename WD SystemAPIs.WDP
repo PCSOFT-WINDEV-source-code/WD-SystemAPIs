@@ -1,0 +1,120 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WD SystemAPIs
+ major_version : 28
+ minor_version : 0
+ type : 4097
+ description : WD SystemAPIs
+ subtype : 0
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : WD SystemAPIs
+    internal_properties : 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
+    configuration_id : 3570218511703052337
+    type : 1
+    generation_name : WD SystemAPIs.exe
+    version :
+     version : VI200030D
+     internal_generation_version : 1
+    icon_filename : .\VST18148c-32-5.ico
+    language : 2
+    telemetry :
+     status : disabled
+ elements :
+  identifier : 0x4ac602bf0017a3d3
+  elements :
+   -
+     name : WIN_MDIParent
+     identifier : 0x4289b12c000159eb
+     internal_properties : CAAAAAgAAAC9mZWJNmNLVGPDOcNOjsMuodKMrI0QqjSKOEcaEx9/qUflF/oo2GIeTPbg2FiIcGCoqA==
+     physical_name : .\WIN_MDIParent.wdw
+     type : 2
+   -
+     name : WinDevMessageBox
+     identifier : 0x4603cdf000d295c3
+     internal_properties : CAAAAAgAAAAaw/VkpX/qvuBxfwN7wGhbo9Prnk1irxkunrUPGpEj2z4ANtyWThc6qUn2O1+X7Q==
+     physical_name : .\WinDevMessageBox.WDW
+     type : 2
+   -
+     name : WIN_Help
+     identifier : 0x428a08f5000342c5
+     internal_properties : CAAAAAgAAADqYNI29bL6JSKC5AoFL6xTHi1VvfA8ZOiOt3qOioiUbJS+VK15jxtZi7UviQnHsyXvdw==
+     physical_name : .\WIN_Help.wdw
+     type : 2
+   -
+     name : TEST_Main
+     identifier : 0x472f416200032835
+     internal_properties : CAAAAAgAAABj31tPfCmBmqUJe4GMpzXE65riqhpO+GhOL3GQo3SmAgoqyifyFqTgAjymEpJOKp5m7g==
+     physical_name : .\TEST_Main.wxt
+     type : 17
+   -
+     name : WIN_Child
+     identifier : 0x4289b138000288db
+     internal_properties : CAAAAAgAAABq4FK2dTJ6paICZIqFoSBXDrH9vZxP9DqiRiqHEBJ6nqJI0i/5D5vZCzWvCYlHM6Vv9w==
+     physical_name : .\WIN_Child.wdw
+     type : 2
+   -
+     name : WIN_Main
+     identifier : 0x4288525500008a11
+     internal_properties : CAAAAAgAAACzj+s/DHkxanUZC7GcidmI01YCGrlr8XW28bZcLPYcPMBsiPkiJrTwEgz2wkK+ui6Wng==
+     physical_name : .\WIN_Main.wdw
+     type : 2
+   -
+     name : System
+     identifier : 0x42884f8e0000b2eb
+     internal_properties : CAAAAAgAAABaMAIGpeLK1ZJy1Bo182wrfn01vQDKVp524Y+AZoyAUOASIGHJfwtJu2VfWdkX49U/xw==
+     physical_name : .\System.wdg
+     type : 7
+   -
+     name : WinDevDialogBox
+     identifier : 0x4603cdf000da970b
+     internal_properties : CAAAAAgAAACuN1l40asWSgTu0aOFgGZt9wUqvQaSbzdA7EozafZi9ksn7WXL6qNGpXWiV7MjWQ==
+     physical_name : .\WinDevDialogBox.WDW
+     type : 2
+  other_elements :
+   -
+     physical_name : .\Description.gif
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ report_and_queries_enabled : false
+ common_generation_directory : true
+ languages :
+  - en-GB
+ code_elements :
+  internal_properties : CAAAAAgAAACbvEtgeraoeNiFSab9IemYLfmt47iVHgLKHkPu3s+Yz8VVQQR9aPkWwY20pgKekIy9o77pivuj1GryKanLNIpiwBK1j+JlEBnz
+  type_code : 0
+  p_codes :
+   -
+     type : 196621
+   -
+     type : 196627
+     enabled : false
+  orphans :
+   -
+     name : WD SystemAPIs
+     identifier : 0x4ac602bf0020a450
+     code_elements :
+      type_code : 159
+      p_codes : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+rad :
+ internal_properties : CAAAAAgAAABhIL0UXeZmxDJxY3Xy0Q==
+project_explorer :
+ explorer_type : project
+ children :
+  -
+    name : Windows Store Apps API
+    explorer_type : custom_folder
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAAd98VSJfHHqE3P0QHwrwdhn7ig8dWBR6valpUTgnAMTVXiDg==

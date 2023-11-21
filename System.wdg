@@ -1,0 +1,724 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : System
+ major_version : 28
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+procedure_set :
+ identifier : 0x16b1d045018ca194
+ internal_properties : CAAAAAgAAABGLu41kG7fjQV3iS4F72qmnKaNh5694reolNKIW0iw
+ code_elements :
+  internal_properties : CAAAAAgAAAA0iA0TTnI3ZeBlEU5bK8KjsTzGVxPjd5yGlGbvFyko6COotcCmCfQ5d/BHwjww2x7HiJktlNpK6y2F2xAxuVhtVNlKDJW/QcIKnK4vV4m9Inz7rAVW1MRKtiIZ7ckb5E/PVU1GZ25pvu2NEyWyYy5luvBLDEPfD8jwXA==
+  type_code : 31
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADN5eWzItxQX75jWFrPEvz4t2PAXysz4kZFgRV5ILKWRLgtENSZmGM50K/ugDsCLs/AN4SNU8NRo5mkt+wYaw+7qkeY1qd7U0d8RL9XIAramTygkvbSnc90iiQQndp+WvSSfbefq4dzpDldO8++Vp1Zu6Knja1WIMc1fiGKswB6
+     code : |1-
+      EXTERN "winconst.wl"
+      CONSTANT
+      	// ------------------------------------------
+      	// 		DIRECTORY SHARE
+      	// ------------------------------------------
+      	SHARE_READONLY 	=  0x0001 
+      	SHARE_TOTAL 			= 0x0002
+      	
+      	SHARE_PERSISTENT 		= 0x0100 	
+      	SHARE_INVISIBLE 		= 0x0100
+      	
+      	SHARE_DIRECTORY 	= 0
+      	SHARE_PRINTER 		= 1
+      	
+      	NERR_DuplicateShare			= 2118
+      	NERR_RedirectedPath			= 2117
+      	NERR_UnknownDevDir			= 2116
+      	ERROR_ACCESS_DENIED		= 0x5
+      	ERROR_INVALID_LEVEL		= 0x7C
+      	ERROR_INVALID_NAME			= 0x7B
+      	ERROR_INVALID_PARAMETER 	= 0x57
+      	
+      	
+      	// -------------------------------------------
+      	// 		RECYCLE BIN
+      	// -------------------------------------------
+      	RECYCLEBIN_NOCONFIRMATION = 0x00000001 
+      	RECYCLEBIN_NOPROGRESSBAR 		 = 0x00000002 
+      	RECYCLEBIN_NOSOUND 			 = 0x00000004 
+      	
+      	
+      	// -------------------------------------------
+      	// 		WALLPAPER
+      	// -------------------------------------------
+      	
+      	SPI_SETDESKWALLPAPER 	= 20
+      	SPIF_UPDATEINIFILE 		= 0x1
+      	
+      	
+      	
+      	// -------------------------------------------
+      	// 		MODIFY THE CURSOR OF A CONTROL
+      	// -------------------------------------------
+      	LR_LOADFROMFILE 	= 0x10
+      	IMAGE_BITMAP 		= 0
+      	IMAGE_ICON 			= 1
+      	IMAGE_CURSOR 		= 2
+      	
+      	
+      	// ------------------------------------------------------
+      	// 		HIDE AN APPLICATION IN THE TASK MANAGER
+      	// ------------------------------------------------------
+      	RSP_SIMPLE_SERVICE 		= 1
+      	RSP_UNREGISTER_SERVICE 	= 0
+      	GWL_EXSTYLE 			= -20
+      	WS_EX_TOOLWINDOW 		= 0x80
+      	
+      	WS_SYSMENU	= 0x80000
+      	WS_POPUP 	= 0x80000000
+      	WS_BORDER 	= 0x800000
+      	WS_VISIBLE 	= 0x10000000
+      	
+      	WS_POPUPWINDOW = (WS_POPUP + WS_BORDER + WS_SYSMENU)
+      	GWL_STYLE= -16
+      	
+      	
+      END
+      
+      
+      // ------------------------------------------
+      // 		DIRECTORY SHARE
+      // ------------------------------------------
+      STSHARE_INFO_50 is Structure
+      	sShareName 				is string ASCIIZ on 13
+      	nType 					is 2-byte int
+      	nFlags 					is system int
+      	nDescriptionAddress 		is system int
+      	nPathAddress 			is system int
+      	sPasswordReadWrite 	is string ASCIIZ on 9
+      	sPasswordReadOnly 		is string ASCIIZ on 9
+      END
+      STSHARE_INFO_2 is Structure
+      	sShareName 		is system int
+      	nType 			is system int
+      	sNote 		is system int
+      	nPermission 		is system int
+      	nMaxConnection 	is system int
+      	nConnectionInProgress 	is system int
+      	nPathAddress 		is system int
+      	sPassword 		is system int
+      END
+      
+      // ------------------------------------------
+      // 		NUMBER OF SCREENS
+      // ------------------------------------------
+      
+      RECT is Structure
+      	nLeft is int
+      	nTop 	is int
+      	nRight 	is int
+      	nBottom 	is int	
+      END
+      
+      MONITORINFO is Structure
+      	nSize 	is int
+      	rcMonitor is RECT
+      	rcWork 	is RECT
+      	dwFlags 	is int
+      END
+      
+      
+      // ------------------------------------------
+      // 		IDLE TIME
+      // ------------------------------------------
+      
+      STLASTINPUTINFO is Structure
+      	nSize is int
+      	nTime	is int
+      END
+      
+      
+      // ------------------------------------------
+      // 		ENUMERATE THE WINDOWS
+      // ------------------------------------------
+      
+      gsReturnString is string		// String returned by the function
+      
+      // ------------------------------------------
+      // 		CHANGE THE CARET OF A CONTROL
+      // ------------------------------------------
+      
+      gbWindowsPassing 	is boolean			// Variable used to find out whether the SetFocus event was supported by Windows
+      gsCaretImageFile is string			// Name of the image file for the caret
+      gnEventID 		is int = 0		// Identifier of the event
+      
+      gnErrCode			is int			// Store the error code
+     type : 720896
+  procedures :
+   -
+     name : ShareDirectory
+     internal_properties : CAAAAAgAAADQW9yqsEz52cr6x80qhvsyP/R8/PITrb7IIgyF/TRiQ9Y7kVxxKmBFcMiasP5GlR5U7KTFni6NA/DMJY58PDRF51BKKrwSn+J2PuqkdrfI85AdCyM/AO0KhitWiA3+AF1NlKtxdgvfCAoNeC9euvPeZz0x2DL/2gHKD55QDzsx3CjahAihAE8q1rvdy+6W95AuWv3wI6g=
+     procedure_id : 1635317134509580692
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] ShareDirectory (<sDirectoryPath>, <sShareName>, <sShareCaption>, <sPassword> [, <nRights> [, <nFlags> [, <nType>]]])
+      //
+      // Parameters:
+      //	sDirectoryPath: Path of the directory to delete
+      //	sShareName: Name of the share to create
+      //	sShareCaption: Caption of the share
+      //	sPassword: Password
+      //	nRights (default value=1): The rights (SHARE_READONLY, SHARE_TOTAL)
+      //	nFlags (default value=256): Is the share persistent? (SHARE_PERSISTENT)
+      //	nType (default value=0): Type of share SHARE_DIRECTORY
+      // Return value:
+      // 	boolean: True if the creation was successful, False otherwise
+      
+      PROCEDURE ShareDirectory(sDirectoryPath,sShareName,sShareCaption,sPassword,nRights = SHARE_READONLY,nFlags = SHARE_PERSISTENT,nType = SHARE_DIRECTORY)
+      // Variables
+      sDLLName is string
+      nError is int
+      
+      SWITCH SysWindowsVersion()
+      	CASE "95","98","ME"
+      		sDLLName = "svrapi.dll"
+      		MyInfo98Share is STSHARE_INFO_50
+      		
+      		// -------------------------------------------
+      		// REMINDER OF THE STRUCTURE USED
+      		// -------------------------------------------
+      		
+      		//SHARE_INFO_50 is structure
+      		//	sShareName is ASCIIZ string on 13
+      		//	nType is int on 2
+      		//	nFlags is int
+      		//	nDescriptionAddress is int
+      		//	nPathAddress is int
+      		//	sPasswordReadWrite is ASCIIZ string on 9
+      		//	sPasswordReadOnly is ASCIIZ string on 9
+      		//END	
+      		
+      		// Update the members of the structure
+      		MyInfo98Share:sShareName 				= sShareName
+      		MyInfo98Share:nType 					= nType
+      		MyInfo98Share:nPathAddress 			= &sDirectoryPath
+      		MyInfo98Share:nDescriptionAddress 		= &sShareCaption
+      		MyInfo98Share:nFlags 					= nFlags
+      		MyInfo98Share:sShareName 				= sShareName
+      		MyInfo98Share:sPasswordReadWrite 	= sPassword
+      		MyInfo98Share:sPasswordReadOnly 	= sPassword
+      		
+      		gnErrCode = API(sDLLName,"NetShareAdd",Null,50,&MyInfo98Share,Dimension(MyInfo98Share)) 
+      		IF gnErrCode<>0 THEN 
+      			RESULT False
+      		END
+      		
+      	OTHER CASE
+      		
+      		sDLLName = "netapi32.dll"
+      		
+      		MyInfoNTShare is STSHARE_INFO_2
+      		// -------------------------------------------
+      		// REMINDER OF THE STRUCTURE USED
+      		// -------------------------------------------
+      		//		SHARE_INFO_2 is structure
+      		//			sShareName 		is system int
+      		//			nType 				is system int
+      		//			sRemark 				is system int
+      		//			nPermission 		is system int
+      		//			nMaxConnection 		is system int
+      		//			nCurrentConnection 	is system int
+      		//			nPathAddress 		is system int
+      		//			sPassword 		is system int
+      		//		END
+      		
+      		// Declare the unicode variables
+      		sUnicodePath		is string UNICODE
+      		sUnicodeName 		is string UNICODE
+      		sUnicodePassword 	is string UNICODE
+      		sUnicodeNote 	is string UNICODE
+      		IF nFlags <> SHARE_PERSISTENT THEN
+      			nType += 0x40000000 // Temporary share
+      		END
+      		MyInfoNTShare:nType = nType
+      		MyInfoNTShare:nMaxConnection = -1		// No limit for connection
+      		
+      		// The total share differs between 95, 98, ME and NT, XP, 2000....
+      		IF nRights = SHARE_TOTAL THEN
+      			MyInfoNTShare:nPermission = 119
+      		ELSE
+      			MyInfoNTShare:nPermission = nRights
+      		END
+      		
+      		// Refresh the path to share
+      		sUnicodePath = AnsiToUnicode(sDirectoryPath)
+      		MyInfoNTShare:nPathAddress = &sUnicodePath
+      		
+      		// Refresh the password
+      		sUnicodePassword = AnsiToUnicode(sPassword)
+      		MyInfoNTShare:sPassword = &sUnicodePassword
+      		
+      		// Refresh the name of the share
+      		sUnicodeName = AnsiToUnicode(sShareName)
+      		MyInfoNTShare:sShareName = &sUnicodeName
+      		
+      		// Refresh the notes
+      		sUnicodeNote = AnsiToUnicode(sShareCaption)
+      		MyInfoNTShare:sNote = &sUnicodeNote
+      		
+      		gnErrCode = API(sDLLName, "NetShareAdd", Null, 2, &MyInfoNTShare, &nError) 
+      		IF gnErrCode <> 0 THEN 
+      			RESULT False
+      		END	
+      END
+      
+      RESULT True
+     type : 458752
+   -
+     name : DeleteShare
+     internal_properties : CAAAAAgAAADULHV1gYPfxS55phwJstUeMzbBD83N8ffMrELGNfMkZY5Gfh6/0iKagoDzrAgzQbcAyd8CN4XvFg8iRL7aisBG//ussfIlqyvs20sDDWuxvUyH1ENDxrPAQm9qsOPstt99tMNpkjX5ImTfyo0c9hW0WznNdJKLbgX8scB+ZdWTgmGzU+GSBygF+ZZ4sHUR8JHF5I1Yu2cZUTSTmT26xVnv9Qoy4jKv
+     procedure_id : 1635317134509646228
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] DeleteShare (<sShareName>)
+      //
+      // Parameters:
+      //	sShareName: Name of the share to remove
+      // Return value:
+      // 	boolean: True if the share was deleted, False otherwise
+      
+      PROCEDURE DeleteShare(sShareName)
+      
+      sDLLName 	is string
+      nResult 	is int
+      
+      // The DLL used depends on the Windows version
+      SWITCH SysWindowsVersion()
+      	CASE "95","98","ME"
+      		
+      		sDLLName = "svrapi.dll"	
+      		nResult = API(sDLLName,"NetShareDel",Null,&sShareName,0)
+      		
+      	OTHER CASE
+      		sDLLName = "netapi32.dll"
+      		sNameUnicodeShare is string UNICODE
+      		
+      		sNameUnicodeShare = AnsiToUnicode(sShareName)
+      		
+      		nResult = API(sDLLName,"NetShareDel",Null,&sNameUnicodeShare,0)
+      END
+      
+      RESULT nResult = 0
+     type : 458752
+   -
+     name : ClearRecycleBin
+     internal_properties : CAAAAAgAAAC97+jw1H1I32FE5XMSo2dpaCFhdX1BSUHxGf3UVadK1CBkCWxmqzL08WToRdj/gqA6cAfLOFLgFyhlWsKGqkKDwnZjcq+9iy9mZFBGRazv3ruBGZnQyurXGxspH7KGBMlcevMNDT8WA1M1B5JhAtFgEsfV8PmPf4qfidEnKHtfXsKPgY8FMzW+nmZxERD7VCXi0Wj/t4al8pBBW9Ga0P30SIw=
+     procedure_id : 1635317134509711764
+     type_code : 15
+     code : |1+
+      // Syntax:
+      //[ <Result> = ] EmptyRecycleBin ([<sDrive>[, <bConfirmation>[, <bProgressBar>[, <bSound>]]]])
+      //
+      // Parameters:
+      //	sDrive: Drive whose recycle bin must be emptied ("" for all the drives)
+      //	bConfirmation: Ask for confirmation?
+      //	bProgressBar: Is the progress bar displayed?
+      //	bSound: Play the sound during the deletion?
+      
+      PROCEDURE ClearRecycleBin(sDrive = "",bConfirm=True, bProgressbar=True,bSound = False)
+      
+      nFlags is int
+      
+      // Calculates the flag used to ask for emptying the recycle bin
+      nFlags = (NOT bConfirm) * RECYCLEBIN_NOCONFIRMATION
+      nFlags += (NOT bProgressbar) * RECYCLEBIN_NOPROGRESSBAR
+      nFlags += (NOT bSound) * RECYCLEBIN_NOSOUND
+      
+      RESULT API( "shell32.dll" , "SHEmptyRecycleBinA" , Null , &sDrive , nFlags) = 0
+      
+     type : 458752
+   -
+     name : ChangeWallpaper
+     internal_properties : CAAAAAgAAADGh/egP0S4RSos3TSTJXfAUMfy7yJB3Xz12ZRYzM3oJSK9jbOj9S1s/SiNpQyEhqfoPbHyqqr0C7ogvcFoA8I1GM6eF5HvnqFuee/EDOOYHcLPhi3CFeo/bQ1qAQwj0A8ax4lMY0BBBDUw4vkd
+     procedure_id : 1635317134509777300
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] ChangeWallpaper (<sNameWallpaperFile>)
+      //
+      // This procedure changes the desktop wallpaper
+      // Parameters:
+      //	sNameWallpaperFile: Path of the file that must be used as wallpaper
+      // Return value:
+      // 	boolean: True if the change was performed, False otherwise
+      
+      PROCEDURE ChangeWallpaper(sNameWallpaperFile)
+      
+      nResult is int
+      
+      nResult = API("user32","SystemParametersInfoA",SPI_SETDESKWALLPAPER,0,&sNameWallpaperFile,SPIF_UPDATEINIFILE)
+      
+      IF nResult = 0 THEN
+      	RESULT False
+      ELSE
+      	RESULT True
+      END
+     type : 458752
+   -
+     name : EnumerateWindows
+     internal_properties : CAAAAAgAAADGxkYpBYh0q0Oo970+5TGNzfk2X1JPoL705+RCZyB8eqGo2UOqR01wzPn+tB473XyUsQ5Sh7PcHe6PFlCyduTWCNX2agZ4MILZ4xMEzmPxmZiSR0afG7yiSkmZjHB7CKawrrIRqCi7+x+NNEby/DTfqDe4bBD0/ATZlXgv8e9QCz83qDIhXD/CUl92GTjqbV/s1D1OD9I9eodSNTGb4nIBJ40ySQ4CPi3GdyDSzWQfwbYuKXxBU1HbpxU+WokA5c5B
+     procedure_id : 1635317134509842836
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] EnumerateWindows ()
+      //
+      // This procedure is used to list the windows opened on the current computer
+      // It returns a string containing the handles of these windows separated by CR characters
+      
+      PROCEDURE EnumerateWindows()
+      
+      // Clears the return string
+      gsReturnString = ""
+      
+      // Call the API
+      // The process is performed in the callback procedure ("Callback_EnumWindows")
+      API("user32", "EnumWindows" , &Callback_EnumWindows, Null)
+      
+      // Return the string containing the handles of the windows found
+      RESULT gsReturnString
+     type : 458752
+   -
+     name : Callback_EnumWindows
+     internal_properties : CAAAAAgAAAAgiJEp2POHxxIdoHafzuMw5zrtU7jBniVI+EwUd+Ou49Lqxg59kmAYivgRkqqTG/18pVfqLV113DfqdrwM4jJYG6+oTXT5BT3ox4nhn9uvm+Rv9FIiVUblvRLd3do73/6ce5w4CezUDxca1bZfue7bQgCGK9VuNVoXxGPrCAhE8VCCtCiVYs8qwO2fHZgcxesLr8pL9sLQ9ucOpBpFaELYjrZmPtbD
+     procedure_id : 1635317134509908372
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] Callback_EnumWindows (<nWinHandle> is int, <nLParam> is int)
+      //
+      // Callback procedure called by EnumerateWindows
+      
+      // Parameters:
+      //	nWinHandle (integer): handle of the window
+      //	nLParam (integer): 		Custom pointer
+      // Return value:
+      // 	boolean: 				True (to continue)
+      
+      PROCEDURE Callback_EnumWindows(nWinHandle is int, nLParam is int <useful>)
+      
+      // Check whether the window is visible
+      IF API("user32","IsWindowVisible" ,nWinHandle) THEN
+      	gsReturnString += nWinHandle + CR	
+      END
+      
+      // Return True to continue 
+      RESULT True
+     type : 458752
+   -
+     name : ModifyDoubleClickTime
+     internal_properties : CAAAAAgAAAD6S/Ncs6acAVoovURT2T/oYPuWJ/JZRYhtvfQwPJmofeIJmUMj/bUgRUR1ZWxg/odIyfViunpu0RxKR7OmAbw3Wjjc6a91YO+Yq4mm0iHa7zSp5E/I+5RVZ7e86+KxwgmswZ+OCaZHKFEc3sUh
+     procedure_id : 1635317134509973908
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] ModifyDoubleClickTime (<nNbMilliseconds> is int)
+      //
+      // Parameters:
+      //	nNbMilliseconds (integer): Time in ms between 2 clicks in order for them to be interpreted as a double click
+      // Return value:
+      // 	boolean: True if the function was successful, False otherwise
+      
+      PROCEDURE ModifyDoubleClickTime(nNbMilliseconds is int)
+      
+      RESULT API("user32","SetDoubleClickTime" , nNbMilliseconds) <> 0
+     type : 458752
+   -
+     name : RetrieveDoubleClickTime
+     internal_properties : CAAAAAgAAAB212fQR1QkldKURTyrPa+4oEeCL+KxpXQVKaR4PI1I5aplFZt7HT2cBQDlXdSMvh8YHWFCqqqwxwZkSYVkJyap5HIyexUbyn16zbsouPeMEd4TqgEGwZZbeZHG1ciH9MOm+40QdzwJPKWgUkmt
+     procedure_id : 1635317134510039444
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] RetrieveDoubleClickTime ()
+      //
+      // This function is used to retrieve the time between 2 clicks so that it is interpreted as a double click
+      
+      PROCEDURE RetrieveDoubleClickTime()
+      
+      RESULT API("user32","GetDoubleClickTime")
+     type : 458752
+   -
+     name : ModifyControlCaret
+     internal_properties : CAAAAAgAAABChlp2EHKwbfSvZYb6Lk/Qkf+UReXdFHnQ3zeuQgiKu+yXbrpwsQqgWFmJ5bgPkv1X6xxk4nfD9uaA4bovpZKK20UUCKdupgUoVFggWZ1n9GOIsFW3jVfuJwoxrgJkFipYaLq/Q9B+yq8BYDNg3HCCphynK8a365Erz+JkTx9ETARss3972zqR+C0EuDyED2SXdKiFF1SS4V1WQaBLBEQz/d2pD0xkgnTKxZaF2dzjvgUn3F594j+xY3GQi06S9rfyMt2idEwg79NoZyVR
+     procedure_id : 1635317134510104980
+     type_code : 15
+     code : |1+
+      // Syntax:
+      //[ <Result> = ] ModifyControlCaret (<sControlName>, <sNameIconFile> [, <nIconWidth> is int [, <nIconHeight> is int [, <bSetFocus>]]])
+      //
+      // Parameters:
+      //	sControlName: Name of the control where the caret must be applied
+      //	sNameIconFile: full name of the icon file
+      //	nIconWidth (integer - default value=16): Requested width (16 by default)
+      //	nIconHeight (integer - default value=16): Requested height (16 by default)
+      //	bSetFocus (default value=0): Parameter used by GetFocus_Control
+      // Return value:
+      // 	boolean: True if the function was successful, False otherwise
+      
+      PROCEDURE ModifyControlCaret(sControlName,sNameIconFile, nIconWidth is int = 16, nIconHeight is int = 16,bSetFocus = False)
+      
+      nImageType 		is int
+      nImageHandle 	is int
+      nControlHandle 	is system int
+      
+      // Retrieve the handle
+      nControlHandle = Handle(sControlName)
+      
+      // Save the name of the icon
+      gsCaretImageFile = sNameIconFile
+      
+      // If the event is not already run
+      IF gnEventID = 0 THEN
+      	// branch the event that will manage the gain of focus for the control
+      	gnEventID = Event("GetFocus_Control",sControlName,WM_SETFOCUS)
+      END
+      
+      // Check the extension of the image (BMP, CUR or ICO only)
+      SWITCH Upper(fExtractPath(sNameIconFile,fExtension))
+      	CASE ".BMP"
+      		nImageType = IMAGE_BITMAP
+      		
+      		// Load the image and create HBITMAP
+      		nImageHandle = API("user32","LoadImageA",Instance(),&sNameIconFile,nImageType, nIconWidth,nIconHeight,LR_LOADFROMFILE)
+      		
+      	OTHER CASE
+      		RESULT False
+      END
+      
+      IF nImageHandle = 0 THEN
+      	RESULT False
+      END
+      
+      
+      // Create a caret
+      IF API("user32","CreateCaret",nControlHandle,nImageHandle,nIconWidth,nIconHeight) THEN
+      	
+      	// return True if we are not called by the event that manages SetFocus
+      	IF bSetFocus = False THEN RESULT True	
+      	
+      	
+      	// draw the caret if we are called by the event that manages SetFocus
+      	API("user32","ShowCaret",nControlHandle)
+      	RESULT True
+      	
+      ELSE
+      	RESULT False
+      END
+     type : 458752
+   -
+     name : IdleTime
+     internal_properties : CAAAAAgAAACU7DUgdTFrgZiLFnBdxPkG1UgnriTR8ZWgkDTk/4s2C1JyZlZtKiCQetixmgoTm33kdQ8qRV3NzG+CbkzU2hqwKwfodbRBRXUY54l5nwv/y1zfnBYm2YKheRZByWZ3gypYv1DsDaCAK3OumfI71TJXbjS6b6lSMVYT2JeX9CTYTQw26Bypdts2LEGTqWQIeRpa/GoDMlpMgmeGTI7J6K5CZF3yonJv
+     procedure_id : 1635317134510170516
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] IdleTime ()
+      //
+      // This procedure is used to find out the idle time on a computer
+      // Returns the idle time in milliseconds
+      
+      PROCEDURE IdleTime()
+      
+      MyInfo is STLASTINPUTINFO
+      nCurrentTime is int
+      
+      SWITCH SysWindowsVersion()
+      	CASE "32s","95","98","NT 3.5","NT 4"
+      		// The API called is available from Windows 2000
+      		RESULT 0
+      	OTHER CASE
+      		// Continue
+      END
+      
+      // Refresh the size of the structure
+      MyInfo:nSize = Dimension(MyInfo)
+      
+      // Retrieve the number of milliseconds passed during the last move (mouse or keyboard) since 
+      // the computer was started
+      API("user32","GetLastInputInfo",&MyInfo)
+      
+      // retrieve the number of milliseconds since the computer was started
+      nCurrentTime = API("kernel32","GetTickCount")
+      
+      // Displays the trace for the example
+      //Trace(StringBuild("%1 ms passed since the last activity",nCurrentTime - MyInfo:ntime))
+      WIN_Main.gsText += StringBuild(<§@12884f8e0001b2dc0008§>,nCurrentTime - MyInfo:nTime) + CR
+      
+      // Returns the number of milliseconds passed since the timer was started
+      RESULT nCurrentTime - MyInfo:nTime
+     type : 458752
+   -
+     name : HideSystemIconMDIChild
+     internal_properties : CAAAAAgAAABYLbImdMInrShiSigBfsQ3wsmoXHCDKjzQHyEjWH4sqzIt/sDYO+8vD+XsRkDWiM19JbJdWcZ12vQ6bTliZrDqzvtmj1zwcLE2nvYp3NB74EnJzpUdsXg40a8hK8v+W0cLzbZtxNGtNugCB9PpW5/CSDNTV603hHLmGioCZe2DuG1FUoiSQbO44jAAJvIB8oYma9cqG0fGOyD3UC7BC97DyKCIPy4z8DDZBZe5bHo/AgyEIIG42EXSXZCvSyLaAlKN8QhHLIKovGKd9V886gGLrJZmDvC5TCnI3n8Zqfw59uvT4m/4oGhSIy4zqVSZFiB54D84z2u/CIxZRGmHJRN98EftthFDSAdG/ohOllbXVA==
+     procedure_id : 1635317134510236052
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //[ <Result> = ] HideSystemIconMDIChild (<nWindowHandle> [, <bKeepClose>])
+      //
+      // This procedure is used to hide the system buttons found in a MDI child window
+      // Parameters:
+      //	nWindowHandle: Handle of the MDI child window whose system buttons must be hidden
+      //	bKeepClose (deafult value=1): Do we keep the 'Close' button
+      
+      PROCEDURE HideSystemIconMDIChild(nWindowHandle, bKeepClose = True)
+      
+      // Modify the attributes of a MDI child window to avoid resizing it or deleting it
+      // KeepClose=True if the 'Close' button is kept
+      
+      LOCAL
+      	nStyle	is int
+      	bRes is boolean
+      	
+      // Modify the attributes of the window border
+      nStyle = API("User32", "GetWindowLongA", Handle(""), -16)
+      
+      // -0x1 removes the maximize button
+      // -0x2 removes the minimize button
+      // -0x8 removes the system menu 
+      // -040 removes the title bar
+      // -0x4 removes the borders for size modification
+      IF bKeepClose THEN
+      	nStyle = (HiWord(nStyle)-0x1-0x2)*65536 + LoWord(nStyle)
+      ELSE
+      	nStyle = (HiWord(nStyle)-0x1-0x8)*65536 + LoWord(nStyle)
+      END
+      // Modify the style of the window
+      bRes = API("User32","SetWindowLongA",Handle(""),-16,nStyle) <> 0
+      
+      RESULT (API("User32","SetWindowPos",Handle(""),0,0,0,0,0,0x27)<>0) AND bRes
+     type : 458752
+   -
+     name : GetFocus_Control
+     internal_properties : CAAAAAgAAAA+0Hvd4SH6iNFPJkeEB5yYZ71EoFGf5ireZbvDxdj/yU34xt9S8SdzNkKg5/AOm5bTXVIRxEfisQmMThyw8LPHLDKb/HBhgJC3TQDobdYwkNyGPZZITzM2y/vahULbAWygr/kdV47OO9D0/wPjVl33EfbbaozVlKgOhqVqQBG3NTB9XlJvAEFXVppM3yN3IFmUNEPKo9pB8O1gbuRP0y6Orph/t4DX2lj1I72/FgnE/9QNAjvGvt0G909r+gu/FBLU7PLxr5jnYafPPAxQkyk=
+     procedure_id : 1635317134510301588
+     type_code : 15
+     code : |1-
+      // Syntax:
+      //GetFocus_Control (<nMessage>, <wParam>, <lParam>)
+      //
+      // Parameters:
+      // 	nMessage: Windows message (WM_SETFOCUS)
+      // 	wParam: 
+      // 	lParam: 
+      
+      PROCEDURE GetFocus_Control(nMessage,wParam,lParam)
+      
+      // The first time, the notes are empty
+      // The second time, give the control back to the system
+      IF gbWindowsPassing = True THEN RETURN
+      
+      // Write something into the notes
+      gbWindowsPassing = True
+      
+      // Return the event on the control
+      SendMessage(Handle(MySelf..Name),_EVE.wMessage,_EVE.wParam,_EVE.lParam)
+      
+      // Clear the notes
+      gbWindowsPassing = False
+      
+      // Modify the control cursor 
+      // MYSELF = the edit control
+      // it is as if we were in the PCode of WM_FOCUS of the control
+      ModifyControlCaret(MySelf..Name,gsCaretImageFile,*,*,True)
+      
+      // return false in order not to give the control back to the system
+      _EVE.Return = 0
+     type : 458752
+   -
+     name : ClearDescriptorBin
+     internal_properties : CAAAAAgAAAA1aNgZEPXo2z0c8Zdyo+cxlJnwkdsHm4dZh8WA91FKJLy+WZxIjQgSTc50qfKBZly6VhNvHhCq/RizuoJEeB7//iC3fiU7HX0eekQKj86zUm+g9ry9JS+6EDLqnhtNuWTdZRxktpavSoj8OKHq2Yarn3biY3ZK9EXYdA6ircaQzUMyGta2ii6hN+n2nIVm9QeIEwbR5VgDRI5z6YMwRtpZwAQ=
+     procedure_id : 1635317134510367124
+     type_code : 15
+     code : |1+
+      // Syntax:
+      //[ <Result> = ] ClearDescriptorBin ( [<sDrive> [, <bConfirm> [, <bProgressbar> [, <bSound>]]]])
+      //
+      // Parameters:
+      //	sDrive (default value=""):Drive whose recycle bin must be emptied ("" for all the drives)
+      //	bConfirm (default value=1):Ask for confirmation?
+      //	bProgressbar (default value=1):Is the progress bar displayed?
+      //	bSound (default value=0):Play the sound during the deletion?
+      
+      PROCEDURE ClearDescriptorBin(sDrive = "",bConfirm=True, bProgressbar=True,bSound = False)
+      nFlags is int
+      
+      // Calculates the flag used to ask for emptying the recycle bin
+      nFlags = (NOT bConfirm) * RECYCLEBIN_NOCONFIRMATION
+      nFlags += (NOT bProgressbar) * RECYCLEBIN_NOPROGRESSBAR
+      nFlags += (NOT bSound) * RECYCLEBIN_NOSOUND
+      
+      DescriptionClearBin is API description
+      DescriptionClearBin..DLLName = "shell32.dll"
+      DescriptionClearBin..FunctionName = "SHEmptyRecycleBinA"
+      DescriptionClearBin..Parameter[1]..Type=apiSystemInt
+      DescriptionClearBin..Parameter[2]..Type=apiSystemInt
+      DescriptionClearBin..Parameter[3]..Type=apiSystemInt
+      DescriptionClearBin..ReturnType = apiBoolean
+      
+      
+      RESULT DescriptionClearBin(Null , &sDrive , nFlags) = 0
+      
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : Système
+resources :
+ string_res :
+  identifier : 0x12884f8e0001b2dc
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+  strings :
+   -
+     text :
+      en-GB : user32
+     index : 0
+   -
+     text :
+      en-GB : LockWorkStation
+     index : 1
+   -
+     text :
+      en-GB : "95"
+     index : 2
+   -
+     text :
+      en-GB : svrapi.dll
+     index : 3
+   -
+     text :
+      en-GB : NetShareAdd
+     index : 4
+   -
+     text :
+      en-GB : netapi32.dll
+     index : 5
+   -
+     text :
+      en-GB : NetShareDel
+     index : 6
+   -
+     text :
+      en-GB : "%1 ms have passed since the last activity"
+     index : 7
+   -
+     text :
+      en-GB : "%1 ms have passed since the last activity"
+     index : 8
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

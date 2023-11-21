@@ -1,0 +1,110 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : WIN_MDIParent
+ major_version : 28
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+window :
+ name : WIN_MDIParent
+ identifier : 0x26b1d04308c39a31
+ internal_properties : CAAAAAgAAACjcz6GZeigqrxiFNtorRhsmKq0O9Dopgs+vxrtxvNsqYFw58niHHgqpDmCLu9A1ArdvLjaGSKaFV+cyz5OKM/b//9gzU+dzOY6vZleh5S+DKHU/0zVOfpo8uEaL8Vw1SZCq8Rou7s+47xBKPGvG4orYGLlHqntFzGzsYzMljAWGjY9kOGlNNMxaZXcJXAcn9rVDP1M1HLqkltoir/BF0fHjg8oN+nZyW2gY/CZ3hXuZvhCzaDMsm5/UeN/zJmUApY9mz27Y0cuCoQY7TYrXDU9n8T1Z2mrXxyk73kyvL2GfUGNnrWh04udIXteL5huf7bp7KlhtgMd02FdNaQ0MhNBULbzGsXFNUkB3NhGcEGf0JZs50HP4qpHAkXvpNuuYmfVY+6YANuWvtDqY8MzBNYIljGE4G/vBpQVMXoiNb0rxDQDLh3YvQDRsD7fRJ2Q0n/nOG31Stb7OEl6YvEi2bbVp5cvQYGb069GUZkQDZHhcZtDSyuykOmmRPoP1eJrCuOnB850qwAjYd8mbiCbIkA4FvRyA+iu8/3bYTH2d+XxcnpuUebtHBErUta4u0BjFSMBvAeBb+eBNm8Z+jxxuj0qoqzvX7mXzE3pv8MdVkD8Uwrm13BOoL2k/totC3gQWXui2xfvpKJTVs+tyNajsbtaguSQpTT4E9ad8fuHCKnL8e8wZdBlX9rPHGNh6mb0xYSqurWDBlPOSXfTDopxGhHad2vM2aSu7bpJ3MBusgV5/ZK+8DNoot0ikjng76tE0qvKDGq9eXy+/dMqyN6jwnKSU+hxZI5S3XAZvjYszshQqUCX8ExD/zg=
+ properties :
+  width : 549
+  height : 353
+  widthClient : 547
+  heightClient : 299
+ controls :
+  -
+    name : STC_TITLE
+    identifier : 0x26b1d04308c79a31
+    internal_properties : CAAAAAgAAAAsMMwfeLTtfyCRl3Dob+VDDJsI7LYA5ujY8RUqIWZMkrQFz8HDIkQwOp8zSpkMFMurK+PdopSIaV8lS8fYf8nvw8DD0ks34qPljRXvn1/dhzdo51s9aAK5UQgQcd9yKC2jMsL27oEs4xG4xyya5Afa4dgSueSmhGQ2Q7fqZh/bzmz91cLnHGIgHcSbzi9ur1C8j5nlEODRfGEUQ623HoYrjihtZaN5hbRi8ShePAzl524NkmUfjgKvZ6VkEGWjT860SwtXJzZXNGMYwdVc90Vk4r9xaC+0CB5+ZCBtj6M+TbLhlHvBiuVD1lVcxciA4YncYKpuxiWUhR2C0OybixtD4ul4olwzQlpHKkftLf0g5t60p3kyINe7/XzLyBBDiKCQ08z3WEpTC8/dtCq1SvNkWSLEbQtPlqSHMlCEoZwdfnP9JbN7F6FwAiE3oGp6FbKM+yRGgY43zZnZeDH6GwqO5SEDqWtVa1/Lni4qBhbFGA5WTjYOnBK9bhN4GaFT+Fil+H274eQdyYRV2m5tK2OMAQErgnII/seVrHbAE6G094lk0taFEDfRT0KhUH8TPsYXb93L22RhQMDC38BuWaXf3Gfrq5uBqKpFDj2QZGS7TVngILEROgw1gW4WyafWBJ1w4mXjvOjpDStuGsjvlRke
+    properties :
+     x : 2
+     y : 5
+     width : 546
+     height : 50
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1-
+         
+        type : 18
+ menu :
+  name : _Menu
+  identifier : 0x26b1d04308c89a31
+  internal_properties : CAAAAAgAAAD7mLdZQF+q7mHdqMKqPikgbZvIRhKHk+XchJDgQDTy7FOYGGV23/0wh7s7b/TCoibreIU8/x5Z7fla0MaeFj6J7UBC50UKdiwA3TiAKmVzVwGzpad6KMQRb0C75C6h1ZNEAQyOigek0gfWxdBFzSM6p9hLR4cY8AbFTyjQuvbjjqNDn4YE8L5kPh8aXCN0rJUnLDvKZs+3ywIduxg+LjFejwWek5UGAvfWAECdPZW+e2kmJTpP+YufHGdsBTvr0EiaO2zw1nTrcNotVRNcgu6VEv+gAvYU1+/QP8miX9u9EOdhZohGVNpr
+  options :
+   -
+     name : File
+     identifier : 0x26b1d04308c99a31
+     internal_properties : CAAAAAgAAAB7PUPpR4wdgZlq0I0lvTdsHCl6jFcoRgEJRaOuxmi11LNeRwi8Ar8RQLbzrnNghXU+RIdj0q1NGN/6Ni0AjMbHHwtZxGdShw/XR9zMN82Gr2EornDQp5rWZC+eImQrLRIU2UNwEpr6xy5lh7IAcuqoVKg/MUzxME3Vj67zBbikdsY0GBt3pRdyDmA6j/YeDgb4vVdtfVeQMmxHUw+wkp8E2ovcGfSbsjWkLRIbw20u/P+KRB53R5XIrYtMuyZsBZ8c7unAqApX/mK6NfWJWUiGlTtFcRNvMUfEJBFC2PEig1CtqSKDXxc3tQ1FHREGAtRgW22z672HFS3WRxw=
+     options :
+      -
+        name : Open
+        identifier : 0x26b1d04308ca9a31
+        internal_properties : CAAAAAgAAABybyQa4mEY5T4XeImv4REvXRxrY2YikdbMlezSXHTtejqmEWEtR7IgAX8/a9mI1+StoSlodqvuJjrIvY2PDreIHQ2vIvs+9Me00Fz9wIiyYmvmT1dkhXjSKXWOPp423k8sydUB2SWxHbqX+rsw1ktfe8zlrwI+esUSwkBXNVfgALzkE/cI0M/Y7NIIjcZJVYEikwyk/vIpkK3yviEwJuCddEfHNE+qi1heEebRtJib64E1ZxkHVN/MS7wUcW3I4hzszPHYWGYMFlbg8M77oj9TACy2J7LyovBHPGh16VRSVIBvcd0ugd9cEYGySIq9e9V9ir9I
+        code_elements :
+         type_code : 26
+         p_codes :
+          -
+            code : |1-
+             // opens an MDI child window
+             MDIOpen(WIN_Child)
+            type : 32
+     code_elements :
+      type_code : 26
+      p_codes : []
+  code_elements :
+   type_code : 26
+   p_codes : []
+ languages :
+  - en-GB
+ popup_menus : []
+ message_bar :
+  internal_properties : CAAAAAgAAAB7YwtSZQbm16PKFmSCwydSxNZcKHXySe6cxMxvoUVypOtrh/BS2+cQ4uUkDS6MFWuEcXB2Ovxa7XrrizHCzbwTyBnId+XeTMbTThm0Z0BzO8+f6tgtSodeWgc5b+fO
+ actionbar : {}
+ code_elements :
+  internal_properties : CAAAAAgAAADoX9MLfGfWKwayS7h3VU0IxYS1fW9zlSB2kZU1q9ocHwiflE/MXMw7jrvAUMb9rvXxetcSO4tMZt/hlnkyfCGjngzjkA==
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      // opens an MDI child window
+      MDIOpen(WIN_Child)
+     type : 34
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      
+     type : 40
+   -
+     type : 11
+   -
+     type : 12
+   -
+     type : 17
+   -
+     type : 13
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : FenMèreMDI
+resources :
+ string_res :
+  identifier : 0x1289a9b300142933
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAAC68/W0/adbG0nFCRhrE42B5HRnbDzVHaz86sSQyxlBk7I=
+associated_test :
+ name : TEST_MèreMDI.wxt
+rad :
+ internal_properties : CAAAAAgAAABoAN7PLpwJW3EiA7WVZdCA5EwrCA1rvutcDHooMWKe
